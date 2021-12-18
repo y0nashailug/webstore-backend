@@ -1,4 +1,4 @@
-package edu.miu.webstorebackend.exception;
+package edu.miu.webstorebackend.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class NotFoundDTO {
-    private String name;
+public class OrderStatusResponse {
     private String message;
+    private String error;
 }
