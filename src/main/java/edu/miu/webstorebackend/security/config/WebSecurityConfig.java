@@ -2,7 +2,7 @@ package edu.miu.webstorebackend.security.config;
 
 import edu.miu.webstorebackend.security.jwt.AuthTokenFilter;
 import edu.miu.webstorebackend.security.jwt.AuthEntryPointJwt;
-import edu.miu.webstorebackend.security.services.UserDetailsServiceImpl;
+import edu.miu.webstorebackend.security.services.spring.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -74,7 +74,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowCredentials(true);
-        configuration.addAllowedOrigin("*");
+        configuration.addAllowedOrigin("http://localhost:3000");
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("*");
         source.registerCorsConfiguration("/**", configuration);
