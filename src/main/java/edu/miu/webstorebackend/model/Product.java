@@ -1,4 +1,4 @@
-package edu.miu.webstorebackend.domain;
+package edu.miu.webstorebackend.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,8 +7,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
-
-import edu.miu.webstorebackend.model.User;
 
 @Entity
 @NoArgsConstructor
@@ -29,7 +27,6 @@ public class Product implements Serializable {
     private double price;
     private double tax;
     private double discount;
-    private int stockCount;
     private int quantity;
 
     @OneToMany
